@@ -12,3 +12,9 @@ esp32:
   framework:
     type: esp-idf
     version: recommended
+
+i2c:
+  sda: 42
+  scl: 41
+  scan: true
+  id: bus_a
