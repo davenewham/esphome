@@ -1,0 +1,14 @@
+substitutions:
+  device_name: living_room
+
+sensor:
+  - platform: scd4x
+    co2:
+      name: "Living Room CO2"
+    temperature:
+      name: "Living Room Temperature"
+    humidity:
+      name: "Living Room Humidity"
+
+<<: !include base/common.yaml
+<<: !include base/lolin_s3.yaml
