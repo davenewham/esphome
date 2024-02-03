@@ -1,0 +1,20 @@
+substitutions:
+  device_name: kitchen
+
+i2c:
+  sda: 42
+  scl: 41
+  scan: true
+  id: bus_a
+
+sensor:
+  - platform: scd4x
+    co2:
+      name: "Kitchen CO2"
+    temperature:
+      name: "Kitchen Temperature"
+    humidity:
+      name: "Kitchen Humidity"
+
+<<: !include base/common.yaml
+<<: !include base/lolin_s3.yaml

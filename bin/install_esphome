@@ -1,0 +1,10 @@
+#!/bin/bash
+
+python3 --version
+python3 -m venv venv
+source venv/bin/activate
+pip3 install esphome
+
+esphome version
+export PATH=$PATH:$HOME/.local/bin
+echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc
