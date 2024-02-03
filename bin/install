@@ -1,8 +1,12 @@
 #!/bin/bash
 
+set -x
+set -e
+
 source venv/bin/activate
 
 if [ -z "$1" ]; then
 	for f in conf/*.yaml; do esphome run $f; done
+else
+	esphome run $1
 fi
-esphome run $1
